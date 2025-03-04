@@ -62,15 +62,15 @@ body {
 
 /* Header */
 header {
-  margin-inline: 10%;
+  padding-inline: 10vw;
   display: flex;
   align-items: center;
-  height: 5rem;
+  padding-block: 0.5rem;
+  position: relative;
 }
 
-header img {
+header a img {
   width: 4rem;
-  height: 4rem;
   margin-right: 1rem;
 }
 
@@ -80,36 +80,50 @@ header ul {
   margin-right: auto;
 }
 
-header a {
+header ul li a {
   text-decoration: none;
   color: #fff;
   cursor: pointer;
-  transition: 0.25s;
+  transition: color 0.25s;
 }
 
-header a:hover {
+header ul li a:hover {
   color: #ff9a07;
 }
 
-header button {
-  background-color: transparent;
+.en {
   border: 2px solid #fff;
   color: #fff;
   width: 5rem;
   padding-block: 0.25rem;
   border-radius: 5rem;
   cursor: pointer;
-  transition: 0.25s;
+  text-decoration: none;
+  text-align: center;
+  transition: border 0.25s, color 0.25s;
 }
 
-header button:hover {
-  border-color: #ff9a07;
+.en:hover {
+  border: 2px solid #ff9a07;
   color: #ff9a07;
+}
+
+/* Header Menu Small Screen */
+.menu {
+  position: absolute;
+  right: 10vw;
+  top: 1.2rem;
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  color: #0f002b;
+  display: none;
+  cursor: pointer;
 }
 
 /* Main */
 main {
-  margin-inline: 10%;
+  margin-inline: 10vw;
   height: calc(100vh - 5rem);
   display: flex;
   flex-direction: column;
@@ -131,20 +145,27 @@ main button {
   border: none;
   width: 10rem;
   text-transform: uppercase;
-  padding-block: 0.5rem;
+  padding-block: 0.75rem;
   border-radius: 5rem;
   color: #fff;
   font-weight: 500;
   cursor: pointer;
+  border: 2px solid #ff9a07;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+main button:hover {
+  background-color: transparent;
+  color: #ff9a07;
 }
 
 /* Prices */
 .live-prices {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   position: absolute;
   right: 0;
-  bottom: 10%;
+  bottom: 5vh;
 }
 
 .coin {
@@ -155,11 +176,11 @@ main button {
   border: 2px solid #fff;
   border-radius: 0.25rem;
   width: 12rem;
-  height: 4.5rem;
+  height: 3.75rem;
 }
 
 .live-prices img {
-  width: 3rem;
+  width: 2.5rem;
 }
 
 .live-price {
@@ -169,4 +190,70 @@ main button {
 
 .coin-name {
   color: #ff9a07;
+  font-size: 0.8rem;
+}
+
+/* Media Query */
+@media screen and (max-width: 47rem) {
+  /* Header */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    background-color: #fff;
+    padding-inline: 0;
+    padding-bottom: 0;
+    z-index: 1;
+  }
+
+  header a img {
+    margin-left: 10vw;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  header ul {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  header ul li a {
+    color: #0f002b;
+    display: block;
+    padding-left: 10%;
+    padding-block: 0.25rem;
+  }
+
+  .en {
+    color: #0f002b;
+    border: none;
+    border-radius: 0;
+    width: 100vw;
+    padding-left: 10%;
+    text-align: left;
+  }
+
+  .en:hover {
+    border: none;
+  }
+
+  /* Main */
+  main {
+    justify-content: flex-start;
+    text-align: center;
+    padding-top: 30vh;
+    height: 100vh;
+  }
+
+  .live-prices {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
 }
