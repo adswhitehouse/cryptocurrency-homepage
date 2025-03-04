@@ -112,7 +112,7 @@ header ul li a:hover {
 .menu {
   position: absolute;
   right: 10vw;
-  top: 1.2rem;
+  top: 1.3rem;
   font-size: 2rem;
   background-color: transparent;
   border: none;
@@ -193,6 +193,15 @@ main button:hover {
   font-size: 0.8rem;
 }
 
+/* Header animation */
+.header-animation {
+  height: 14.8rem;
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
 /* Media Query */
 @media screen and (max-width: 47rem) {
   /* Header */
@@ -204,6 +213,9 @@ main button:hover {
     padding-inline: 0;
     padding-bottom: 0;
     z-index: 1;
+    height: 5rem;
+    overflow: hidden;
+    transition: height 0.5s;
   }
 
   header a img {
@@ -212,6 +224,7 @@ main button:hover {
 
   .menu {
     display: block;
+    transition: transform 0.5s;
   }
 
   header ul {
