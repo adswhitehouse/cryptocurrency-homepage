@@ -54,5 +54,119 @@ select {
 
 /* Body */
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto Mono", monospace;
+  background: url(./images/background.png) no-repeat center center / cover;
+  color: #fff;
+  position: relative;
+}
+
+/* Header */
+header {
+  margin-inline: 10%;
+  display: flex;
+  align-items: center;
+  height: 5rem;
+}
+
+header img {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
+}
+
+header ul {
+  display: flex;
+  gap: 2rem;
+  margin-right: auto;
+}
+
+header a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+header a:hover {
+  color: #ff9a07;
+}
+
+header button {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  width: 5rem;
+  padding-block: 0.25rem;
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+header button:hover {
+  border-color: #ff9a07;
+  color: #ff9a07;
+}
+
+/* Main */
+main {
+  margin-inline: 10%;
+  height: calc(100vh - 5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+}
+
+h1 {
+  font-size: 4.5rem;
+}
+
+h1 span {
+  color: #ff9a07;
+}
+
+main button {
+  background-color: #ff9a07;
+  border: none;
+  width: 10rem;
+  text-transform: uppercase;
+  padding-block: 0.5rem;
+  border-radius: 5rem;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Prices */
+.live-prices {
+  display: flex;
+  gap: 2rem;
+  position: absolute;
+  right: 0;
+  bottom: 10%;
+}
+
+.coin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border: 2px solid #fff;
+  border-radius: 0.25rem;
+  width: 12rem;
+  height: 4.5rem;
+}
+
+.live-prices img {
+  width: 3rem;
+}
+
+.live-price {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.coin-name {
+  color: #ff9a07;
 }
